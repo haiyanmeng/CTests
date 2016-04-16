@@ -30,6 +30,9 @@ int main(void) {
 	fprintf(stdout, "str2: %s; sizeof(char): %zu; sizeof(str2): %zu; strlen(str2):  %zu\n", str, sizeof(char), sizeof(str2), strlen(str2));
 	// strlen(str2) has a memory leakage: Conditional jump or move depends on uninitialised value
 
+	char str3[5] = "hello";
+	fprintf(stdout, "str3: %s; sizeof(char): %zu; sizeof(str3): %zu;\n", str, sizeof(char), sizeof(str3));
+
 	printf("%s\n", p->s); 
 	printf("%s\n", p[0].s); /* (*(p+0)).s */
 	
@@ -52,6 +55,7 @@ h
 str: hello; sizeof(char): 1; sizeof(str): 6; strlen(str):  5
 str1: hello; sizeof(char): 1; sizeof(str1): 8; strlen(str1):  5
 str2: hello; sizeof(char): 1; sizeof(str2): 5; strlen(str2):  5
+str3: hello; sizeof(char): 1; sizeof(str3): 5;
 abcd
 abcd
 7
